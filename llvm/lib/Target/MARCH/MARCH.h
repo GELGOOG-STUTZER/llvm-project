@@ -1,4 +1,4 @@
-//===-- mARCH.h - Top-level interface for mARCH representation ----*- C++ -*-===//
+//===-- MARCH.h - Top-level interface for MARCH representation ----*- C++ -*-===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -8,18 +8,18 @@
 //===----------------------------------------------------------------------===//
 //
 // This file contains the entry points for global functions defined in
-// the LLVM mARCH back-end.
+// the LLVM MARCH back-end.
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLVM_LIB_TARGET_mARCH_mARCH_H
-#define LLVM_LIB_TARGET_mARCH_mARCH_H
+#ifndef LLVM_LIB_TARGET_MARCH_MARCH_H
+#define LLVM_LIB_TARGET_MARCH_MARCH_H
 
-#include "MCTargetDesc/mARCHMCTargetDesc.h"
+#include "MCTargetDesc/MARCHMCTargetDesc.h"
 #include "llvm/Target/TargetMachine.h"
 
 namespace llvm {
-  class mARCHTargetMachine;
+  class MARCHTargetMachine;
   class FunctionPass;
 
 } // end namespace llvm;

@@ -1,4 +1,4 @@
-//===-- mARCHTargetMachine.cpp - Define TargetMachine for mARCH -------------===//
+//===-- MARCHTargetMachine.cpp - Define TargetMachine for MARCH -------------===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -7,11 +7,11 @@
 //
 //===----------------------------------------------------------------------===//
 //
-// Implements the info about mARCH target spec.
+// Implements the info about MARCH target spec.
 //
 //===----------------------------------------------------------------------===//
 
-#include "mARCH.h"
+#include "MARCH.h"
 
 #include "llvm/IR/Attributes.h"
 #include "llvm/IR/Function.h"
@@ -23,7 +23,7 @@
 
 using namespace llvm;
 
-#define DEBUG_TYPE "mARCH"
+#define DEBUG_TYPE "MARCH"
 
-extern "C" void LLVMInitializemARCHTarget() {
+extern "C" void LLVMInitializeMARCHTarget() {
 }

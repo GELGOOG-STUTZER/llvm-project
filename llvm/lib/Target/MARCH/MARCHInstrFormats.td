@@ -1,4 +1,4 @@
-//===-- mARCHInstrFormats.td - mARCH Instruction Formats -----*- tablegen -*-===//
+//===-- MARCHInstrFormats.td - MARCH Instruction Formats -----*- tablegen -*-===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -8,7 +8,7 @@
 //===----------------------------------------------------------------------===//
 
 //===----------------------------------------------------------------------===//
-//  Describe mARCH instructions format
+//  Describe MARCH instructions format
 //
 //  CPU INSTRUCTION FORMATS
 //
@@ -20,13 +20,13 @@
 //
 //===----------------------------------------------------------------------===//
 
-// Generic mARCH Format
-class mARCHInst<bits<8> op, dag outs, dag ins, string asmstr, list<dag> pattern>: Instruction
+// Generic MARCH Format
+class MARCHInst<bits<8> op, dag outs, dag ins, string asmstr, list<dag> pattern>: Instruction
 {
   // Inst and Size: for tablegen(... -gen-emitter) and
   // tablegen(... -gen-disassembler) in CMakeLists.txt
-  let Namespace = "mARCH";
-  let DecoderNamespace = "mARCH";
+  let Namespace = "MARCH";
+  let DecoderNamespace = "MARCH";
   let Size = 4;
 
   field bits<32> Inst;

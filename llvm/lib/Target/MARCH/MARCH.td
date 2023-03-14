@@ -1,4 +1,4 @@
-//===-- mARCH.td - Describe the mARCH Target Machine ----*- tablegen -*-===//
+//===-- MARCH.td - Describe the MARCH Target Machine ----*- tablegen -*-===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -6,7 +6,7 @@
 // License. See LICENSE.TXT for details.
 //
 //===----------------------------------------------------------------------===//
-// This is the top level entry point for the mARCH target.
+// This is the top level entry point for the MARCH target.
 //===----------------------------------------------------------------------===//
 
 //===----------------------------------------------------------------------===//
@@ -19,23 +19,23 @@ include "llvm/Target/Target.td"
 // Target-dependent interfaces
 //===----------------------------------------------------------------------===//
 
-include "mARCHRegisterInfo.td"
+include "MARCHRegisterInfo.td"
 
 //===----------------------------------------------------------------------===//
 // Calling Conv, Instruction Descriptions
 //===----------------------------------------------------------------------===//
 
-include "mARCHInstrInfo.td"
-def mARCHInstrInfo : InstrInfo;
+include "MARCHInstrInfo.td"
+def MARCHInstrInfo : InstrInfo;
 
 //===----------------------------------------------------------------------===//
-// mARCH processors supported.
+// MARCH processors supported.
 //===----------------------------------------------------------------------===//
 
-// Will generate mARCHGenAsmWrite.inc included by mARCHInstPrinter.cpp, contents
+// Will generate MARCHGenAsmWrite.inc included by MARCHInstPrinter.cpp, contents
 //  as follows,
-// void mARCHInstPrinter::printInstruction(const MCInst *MI, raw_ostream &O) {...}
-// const char *mARCHInstPrinter::getRegisterName(unsigned RegNo) {...}
-def mARCH : Target {
-  let InstructionSet = mARCHInstrInfo;
+// void MARCHInstPrinter::printInstruction(const MCInst *MI, raw_ostream &O) {...}
+// const char *MARCHInstPrinter::getRegisterName(unsigned RegNo) {...}
+def MARCH : Target {
+  let InstructionSet = MARCHInstrInfo;
 }

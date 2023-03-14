@@ -1,4 +1,4 @@
-//===-- mARCHMCTargetDesc.h - mARCH Target Descriptions -----------*- C++ -*-===//
+//===-- MARCHMCTargetDesc.h - MARCH Target Descriptions -----------*- C++ -*-===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -7,12 +7,12 @@
 //
 //===----------------------------------------------------------------------===//
 //
-// This file provides mARCH specific target descriptions.
+// This file provides MARCH specific target descriptions.
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLVM_LIB_TARGET_mARCH_MCTARGETDESC_mARCHMCTARGETDESC_H
-#define LLVM_LIB_TARGET_mARCH_MCTARGETDESC_mARCHMCTARGETDESC_H
+#ifndef LLVM_LIB_TARGET_MARCH_MCTARGETDESC_MARCHMCTARGETDESC_H
+#define LLVM_LIB_TARGET_MARCH_MCTARGETDESC_MARCHMCTARGETDESC_H
 
 #include "llvm/Support/DataTypes.h"
 
@@ -22,17 +22,17 @@ namespace llvm {
 class Target;
 class Triple;
 
-extern Target ThemARCHTarget;
+extern Target TheMARCHTarget;
 
 } // End llvm namespace
 
-// Defines symbolic names for mARCH registers.  This defines a mapping from
+// Defines symbolic names for MARCH registers.  This defines a mapping from
 // register name to register number.
 #define GET_REGINFO_ENUM
-#include "mARCHGenRegisterInfo.inc"
+#include "MARCHGenRegisterInfo.inc"
 
-// Defines symbolic names for the mARCH instructions.
+// Defines symbolic names for the MARCH instructions.
 #define GET_INSTRINFO_ENUM
-#include "mARCHGenInstrInfo.inc"
+#include "MARCHGenInstrInfo.inc"
 
 #endif

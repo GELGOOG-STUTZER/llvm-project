@@ -1,4 +1,4 @@
-//===- mARCHInstrInfo.td - Target Description for mARCH Target -*- tablegen -*-=//
+//===- MARCHInstrInfo.td - Target Description for MARCH Target -*- tablegen -*-=//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -7,28 +7,28 @@
 //
 //===----------------------------------------------------------------------===//
 //
-// This file contains the mARCH implementation of the TargetInstrInfo class.
+// This file contains the MARCH implementation of the TargetInstrInfo class.
 //
 //===----------------------------------------------------------------------===//
 
 //===----------------------------------------------------------------------===//
-// mARCH profiles and nodes
+// MARCH profiles and nodes
 //===----------------------------------------------------------------------===//
 
-def SDT_mARCHRet          : SDTypeProfile<0, 1, [SDTCisInt<0>]>;
+def SDT_MARCHRet          : SDTypeProfile<0, 1, [SDTCisInt<0>]>;
 
 // Return
-def mARCHRet : SDNode<"mARCHISD::Ret", SDTNone,
+def MARCHRet : SDNode<"MARCHISD::Ret", SDTNone,
                      [SDNPHasChain, SDNPOptInGlue, SDNPVariadic]>;
 
 //===----------------------------------------------------------------------===//
 // Instruction format superclass
 //===----------------------------------------------------------------------===//
 
-include "mARCHInstrFormats.td"
+include "MARCHInstrFormats.td"
 
 //===----------------------------------------------------------------------===//
-// mARCH Operand, Complex Patterns and Transformations Definitions.
+// MARCH Operand, Complex Patterns and Transformations Definitions.
 //===----------------------------------------------------------------------===//
 
 //===----------------------------------------------------------------------===//
@@ -39,7 +39,7 @@ include "mARCHInstrFormats.td"
 let isBranch=1, isTerminator=1, isBarrier=1, hasDelaySlot = 1,
     isIndirectBranch = 1 in
 class Branches<bits<8> op, string instr_asm, RegisterClass RC>:
-  mARCHInst<op, (outs), (ins RC:$r1),
+  MARCHInst<op, (outs), (ins RC:$r1),
      !strconcat(instr_asm, "\t$r1"), [(brind RC:$r1)]> {
 }
 //@Branches }
@@ -58,10 +58,10 @@ class RetBase<RegisterClass RC>: Branches<0x3c, "RET", RC> {
 //===----------------------------------------------------------------------===//
 
 //===----------------------------------------------------------------------===//
-// mARCH Instructions
+// MARCH Instructions
 //===----------------------------------------------------------------------===//
 
 def RET     : RetBase<CPURegs>;
 
 /// No operation
-def NOP   : mARCHInst<0, (outs), (ins), "nop", []>;
+def NOP   : MARCHInst<0, (outs), (ins), "nop", []>;

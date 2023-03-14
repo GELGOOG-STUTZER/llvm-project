@@ -1,4 +1,4 @@
-//===-- mARCHMCTargetDesc.cpp - mARCH Target Descriptions -------------------===//
+//===-- MARCHMCTargetDesc.cpp - MARCH Target Descriptions -------------------===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -7,11 +7,11 @@
 //
 //===----------------------------------------------------------------------===//
 //
-// This file provides mARCH specific target descriptions.
+// This file provides MARCH specific target descriptions.
 //
 //===----------------------------------------------------------------------===//
 
-#include "mARCHMCTargetDesc.h"
+#include "MARCHMCTargetDesc.h"
 #include "llvm/MC/MachineLocation.h"
 #include "llvm/MC/MCELFStreamer.h"
 #include "llvm/MC/MCInstrAnalysis.h"
@@ -28,11 +28,11 @@
 using namespace llvm;
 
 #define GET_INSTRINFO_MC_DESC
-#include "mARCHGenInstrInfo.inc"
+#include "MARCHGenInstrInfo.inc"
 
 #define GET_REGINFO_MC_DESC
-#include "mARCHGenRegisterInfo.inc"
+#include "MARCHGenRegisterInfo.inc"
 
-extern "C" void LLVMInitializemARCHTargetMC() {
+extern "C" void LLVMInitializeMARCHTargetMC() {
 
 }

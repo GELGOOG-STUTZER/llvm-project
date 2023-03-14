@@ -375,7 +375,7 @@ set(LLVM_ALL_TARGETS
   Lanai
   Mips
   MSP430
-  mARCH
+  MARCH
   NVPTX
   PowerPC
   RISCV

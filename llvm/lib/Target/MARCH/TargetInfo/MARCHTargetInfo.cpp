@@ -1,4 +1,4 @@
-//===-- mARCHTargetInfo.cpp - mARCH Target Implementation -------------------===//
+//===-- MARCHTargetInfo.cpp - MARCH Target Implementation -------------------===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -7,15 +7,15 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "mARCH.h"
+#include "MARCH.h"
 #include "llvm/IR/Module.h"
 #include "llvm/MC/TargetRegistry.h"
 using namespace llvm;
 
-Target llvm::ThemARCHTarget;
+Target llvm::TheMARCHTarget;
 
-extern "C" void LLVMInitializemARCHTargetInfo() {
+extern "C" void LLVMInitializeMARCHTargetInfo() {
   RegisterTarget<Triple::march,
                  /*HasJIT=*/false>
-      X(ThemARCHTarget, "mARCH", "mARCH (32-bit simhulator arch)", "mARCH");
+      X(TheMARCHTarget, "MARCH", "MARCH (32-bit simhulator arch)", "MARCH");
 }
