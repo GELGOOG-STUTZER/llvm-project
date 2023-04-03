@@ -1,0 +1,12 @@
+#ifndef LLVM_LIB_TARGET_MARCH_TARGETINFO_MARCHTARGETINFO_H
+#define LLVM_LIB_TARGET_MARCH_TARGETINFO_MARCHTARGETINFO_H
+
+namespace llvm {
+
+class Target;
+
+Target &getTheMARCHTarget();
+
+} // namespace llvm
+
+#endif // LLVM_LIB_TARGET_MARCH_TARGETINFO_MARCHTARGETINFO_H
